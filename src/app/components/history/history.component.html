@@ -1,0 +1,29 @@
+<h4>History Results</h4>
+<mat-tab-group>
+    <mat-tab label="Successful Search">
+        <ng-container *ngIf="successfulSearch.length > 0">
+            <div class="flex-style" *ngFor="let item of successfulSearch">
+                <a [routerLink]="['/results',item.searchText]">{{item.searchText}}</a>
+                <span class="material-icons delete" (click)="deleteHistoryItem(item.searchText,item.success)">
+                    delete
+                </span>
+            </div>
+        </ng-container>
+        <div *ngIf="successfulSearch.length === 0">
+            No search history available.
+        </div>
+    </mat-tab>
+    <mat-tab label="Unsuccessful Search"> 
+        <ng-container *ngIf="failureSearch.length > 0">
+            <div class="flex-style" *ngFor="let item of failureSearch">
+                {{item.searchText}}
+                <span class="material-icons delete" (click)="deleteHistoryItem(item.searchText,item.success)">
+                    delete
+                </span>
+            </div>
+        </ng-container>
+        <div *ngIf="failureSearch.length === 0">
+            No search history available.
+        </div>
+    </mat-tab>
+</mat-tab-group>

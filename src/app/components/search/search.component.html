@@ -1,0 +1,16 @@
+<div class="full-width">
+    <form class="form" [formGroup]="searchForm">
+        <mat-form-field class="full-width" appearance="fill">
+          <mat-label>Search user...</mat-label>
+          <input matInput name="searchText" formControlName="searchText">
+        </mat-form-field>
+    </form>
+    <div *ngIf="searchForm.value.searchText && userSearchResults?.total_count === 0">
+        No results to display.
+    </div>
+    <div *ngIf="searchForm.value.searchText && userSearchResults?.total_count !== 0">
+        <ng-container *ngFor="let user of userSearchResults?.items">
+            <app-user [user] = "user"></app-user>
+        </ng-container>
+    </div>
+</div>

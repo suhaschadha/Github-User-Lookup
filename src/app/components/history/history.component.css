@@ -1,0 +1,19 @@
+.flex-style{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10px;
+}
+.delete{
+    color:maroon;   
+}
+.delete:hover{
+    cursor: pointer;
+}
+h4{
+    padding-left: 10px;
+}
+a{
+    color:inherit;
+    text-decoration: underline;
+    cursor: pointer;
+}

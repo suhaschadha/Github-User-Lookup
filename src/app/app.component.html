@@ -1,0 +1,32 @@
+<mat-sidenav-container class="example-container">
+    <mat-sidenav mode="side" class="nav-bar" opened>
+        <div class="nav-item-container">
+                <a [routerLink]="['/home']" routerLinkActive="active">
+                    <span class="nav-item-text">Home</span>
+                    <span class="material-icons nav-item-icon">
+                        home
+                    </span>
+                </a>
+        </div>
+        <div class="nav-item-container">
+            <a [routerLink]="['/search']" routerLinkActive="active">
+                <span class="nav-item-text">Search</span>
+                <span class="material-icons nav-item-icon">
+                    search
+                </span>
+            </a>
+        </div>
+        <div class="nav-item-container">
+            <a [routerLink]="['/history']" routerLinkActive="active">
+                <span class="nav-item-text">History</span>
+                <span class="material-icons nav-item-icon">
+                    history
+                </span>
+            </a>
+        </div>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <h3 class="header custom-padding">Welcome to the user lookup portal</h3>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>

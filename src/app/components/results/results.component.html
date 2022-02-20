@@ -1,0 +1,11 @@
+<div *ngIf="searchText && userSearchResults?.total_count === 0">
+    No results to display.
+</div>
+<div *ngIf="searchText && userSearchResults?.total_count !== 0">
+    <ng-container *ngFor="let user of userSearchResults?.items">
+        <app-user [user] = "user"></app-user>
+    </ng-container>
+</div>
+<div *ngIf="!searchText">
+    Please select a valid result.
+</div>
