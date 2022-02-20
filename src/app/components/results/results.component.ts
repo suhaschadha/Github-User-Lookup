@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute } from '@angular/router';
 import { take } from 'rxjs';
-import { UserService } from 'src/app/services/user.service';
-import { UserResults } from 'src/app/shared/models/user-results.model';
+import { UserService } from '../../services/user.service';
+import { UserResults } from '../../shared/models/user-results.model';
 
 @Component({
   selector: 'app-results',

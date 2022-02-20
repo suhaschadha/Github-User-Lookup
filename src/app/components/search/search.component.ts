@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { debounceTime, distinctUntilChanged, take } from 'rxjs';
-import { HistoryService } from 'src/app/services/history.service';
-import { UserService } from 'src/app/services/user.service';
-import { UserResults } from 'src/app/shared/models/user-results.model';
+import { HistoryService } from '../../services/history.service';
+import { UserService } from '../../services/user.service';
+import { UserResults } from '../../shared/models/user-results.model';
 
 @Component({
   selector: 'app-search',
